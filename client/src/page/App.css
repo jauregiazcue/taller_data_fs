@@ -214,6 +214,8 @@ body {
   padding: 1em;
   border: none;
   border-radius: 10px;
+
+  background-color: white;
 }
 
 #root div form button {
