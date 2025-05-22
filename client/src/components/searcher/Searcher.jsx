@@ -1,12 +1,8 @@
 import { useState } from "react";
 
-function Searcher({handleSubmit}) {
+function Searcher({inputs, setInputs, handleSubmit}) {
 
-  const [inputs, setInputs] = useState({
-    surface: '',
-    bedrooms: '',
-    restrooms: ''
-  });
+  
 
   const handleChange = (e) => {
     setInputs({
@@ -15,7 +11,7 @@ function Searcher({handleSubmit}) {
     });
   };
 
-  return <form onSubmit={handleSubmit(inputs)}>
+  return <form onSubmit={handleSubmit}>
     <label htmlFor="surface">Surface:</label>
     <input type="text" id="surface" name="surface" value={inputs.surface} onChange={handleChange} />
 

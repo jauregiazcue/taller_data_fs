@@ -4,11 +4,19 @@ import './App.css'
 
 function App() {
   const [prediction, setPrediction] = useState(null);
+  const [inputs, setInputs] = useState({
+    surface: '',
+    bedrooms: '',
+    restrooms: ''
+  });
 
-  const handleSubmit = async (inputs) => async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch('http://localhost:5000/predict', {
+
+    //NEED TO UNCOMMENT THIS TO CONNECT IT WITH DATA SCIENCE
+
+    /*const response = await fetch('http://localhost:5000/predict', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -16,16 +24,19 @@ function App() {
       body: JSON.stringify(inputs)
     });
 
-    const data = await response.json();
+    let data = await response.json();*/
 
-    setPrediction(data.prediction);
+    //INFO NEEDS TO BE CHANGE TO data.prediction
+    let info = 1000.0000;
+    setPrediction(info + "€");
+    console.log("Enter");
   };
 
   return (
     <>
       <div>
         <h1>Hestia - Buscador de hogares</h1>
-        <Searcher handleSubmit={handleSubmit} />
+        <Searcher inputs={inputs} setInputs={setInputs} handleSubmit={handleSubmit} />
         {prediction && (
           <p>Predicted Price: {prediction}</p>
         )}
