@@ -13,13 +13,13 @@ function Searcher({inputs, setInputs, handleSubmit}) {
 
   return <form onSubmit={handleSubmit}>
     <label htmlFor="surface">Surface:</label>
-    <input type="text" id="surface" name="surface" value={inputs.surface} onChange={handleChange} />
+    <input type="number" id="surface" name="surface" value={inputs.surface} onChange={handleChange} required/>
 
     <label htmlFor="bedrooms">Bedrooms:</label>
-    <input type="text" id="bedrooms" name="bedrooms" value={inputs.bedrooms} onChange={handleChange} />
+    <input type="number" id="bedrooms" name="bedrooms" value={inputs.bedrooms} onChange={handleChange} required min="0" max="50" />
 
     <label htmlFor="restrooms">Restrooms:</label>
-    <input type="text" id="restrooms" name="restrooms" value={inputs.restrooms} onChange={handleChange} />
+    <input type="number" id="restrooms" name="restrooms" value={inputs.restrooms} onChange={handleChange} required min="0" max="5" />
 
     <button type="submit">Predict</button>
   </form>
