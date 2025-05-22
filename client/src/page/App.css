@@ -1,10 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root {
-  --background : black;
-  --text: white;
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+hgroup,
+menu,
+section {
+  display: block;
 }
 
 body {
-  background-color: var(--background);
-  color: var(--text);
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: inline-block;
+}
+
+/* END RESET */
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --main-color: #1E1E1E;
+  --hat-color: #444444;
+  --hat-text-color: #F2F2F2;
+  --items-color: #444444;
+  --button-color: #7c25b6;
+  --text-color: #F2F2F2;
+}
+
+
+
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  background-color: var(--hat-color);
+  color: var(--hat-text-color);
+  border-radius: 10px;
+}
+
+body {
+  background-color: var(--main-color);
+}
+
+#root div {
+  background-color: var(--items-color);
+  color: var(--text-color);
+  display: flex;
+  flex-flow: column;
+  gap: 2em;
+
+  margin: 10%;
+  padding: 1em;
+
+  border-radius: 20px;
+}
+
+#root div form {
+  display: flex;
+  flex-flow: column;
+  gap: 1em;
+
+  width: 100%;
+}
+
+#root div form label {
+  font-size: 1.5rem;
+}
+
+#root div form input {
+  width: 100%;
+
+  padding: 1em;
+  border: none;
+  border-radius: 10px;
+}
+
+#root div form button {
+  padding: 1em;
+
+  background-color: var(--button-color);
+  color: var(--text-color);
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  border: none;
+  border-radius: 10px;
+}
+
+.prediction {
+  font-size: 2rem;
+  text-align: center;
+}
+
+#theme-toggle {
+  position: fixed;
+  bottom: 1em;
+  left: 1em;
+
+  width: 3em;
+  height: 3em;
+
+  border: none;
+  border-radius: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--button-color);
+  color: var(--text-color);
+}
+
+body.light-theme {
+  --main-color: #cbe4e9;
+  --hat-color: #572832;
+  --hat-text-color: #ffffff;
+  --items-color: #1E9F9A;
+  --button-color: #F09E06;
+  --text-color: #3E3E3E;
 }
