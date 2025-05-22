@@ -13,6 +13,9 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if(!surface || !bedrooms || !restrooms) {
+      throw new Error('Por favor, rellene todos los campos');
+    }
 
     //NEED TO UNCOMMENT THIS TO CONNECT IT WITH DATA SCIENCE
 
