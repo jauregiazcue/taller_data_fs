@@ -34,10 +34,10 @@ function Searcher({ onSubmit }) {
     <input type="number" id="floor" name="floor" value={inputs.floor} onChange={handleChange} required min="0" max="5" />
 
     <label htmlFor="has_elevator">Elevator:</label>
-    <input type="checkbox" id="has_elevator" name="has_elevator" checked={inputs.has_elevator} onChange={handleChange} />
+    <input type="checkbox" id="has_elevator" name="has_elevator" /*checked={inputs.has_elevator} onChange={handleChange}*/ required/>
 
     <label htmlFor="has_heating">Heating:</label>
-    <input type="checkbox" id="has_heating" name="has_heating" checked={inputs.has_heating} onChange={handleChange} />
+    <input type="checkbox" id="has_heating" name="has_heating" /*checked={inputs.has_heating} onChange={handleChange}*/ required/>
 
     <button type="submit">Predict</button>
   </form>

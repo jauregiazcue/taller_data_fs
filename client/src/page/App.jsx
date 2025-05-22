@@ -6,7 +6,7 @@ function App() {
   const [prediction, setPrediction] = useState(null);
 
   const handleSubmit = async (inputs) => {
-    inputs.has_elevator == "on" ? inputs.has_elevator = 1 : inputs.has_elevator = 0;
+    /*inputs.has_elevator == "on" ? inputs.has_elevator = 1 : inputs.has_elevator = 0;
     inputs.has_heating == "on" ? inputs.has_heating = 1 : inputs.has_heating = 0;
 
     if (!inputs.surface || !inputs.bedrooms || !inputs.restrooms) return;
@@ -19,9 +19,8 @@ function App() {
       body: JSON.stringify(inputs)
     });
 
-    let data = await response.json();
-
-    setPrediction(data.prediction + "€");
+    let data = await response.json();*/
+    setPrediction(~~(Math.random() * (10000000 - 10000) + 10000)+ "€");
     console.log("Enter");
   };
 
