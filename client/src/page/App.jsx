@@ -7,6 +7,8 @@ function App() {
 
   const handleSubmit = async (inputs) => {
 
+    if(!inputs.surface || !inputs.bedrooms || !inputs.restrooms) return;
+    
     const response = await fetch('http://localhost:5000/predict', {
       method: 'POST',
       headers: {
