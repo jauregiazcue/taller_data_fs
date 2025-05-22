@@ -6,9 +6,11 @@ function App() {
   const [prediction, setPrediction] = useState(null);
 
   const handleSubmit = async (inputs) => {
-
-    if(!inputs.surface || !inputs.bedrooms || !inputs.restrooms) return;
+    inputs.has_elevator == "on" ? inputs.has_elevator = 1 : inputs.has_elevator = 0;
+    inputs.has_heating == "on" ? inputs.has_heating = 1 : inputs.has_heating = 0;
     
+    if (!inputs.surface || !inputs.bedrooms || !inputs.restrooms) return;
+
     const response = await fetch('http://localhost:5000/predict', {
       method: 'POST',
       headers: {
@@ -25,13 +27,13 @@ function App() {
 
   const [isLightTheme, setIsLightTheme] = useState(false);
 
-    useEffect(() => {
-        document.body.classList.toggle('light-theme', isLightTheme);
-    }, [isLightTheme]);
+  useEffect(() => {
+    document.body.classList.toggle('light-theme', isLightTheme);
+  }, [isLightTheme]);
 
-    const toggleTheme = () => {
-        setIsLightTheme((prev) => !prev);
-    };
+  const toggleTheme = () => {
+    setIsLightTheme((prev) => !prev);
+  };
 
   return (
     <>

@@ -13,6 +13,7 @@ function Searcher({ onSubmit }) {
   }
 
   const handleChange = (e) => {
+
     setInputs({
       ...inputs,
       [e.target.name]: e.target.value
@@ -32,11 +33,11 @@ function Searcher({ onSubmit }) {
     <label htmlFor="floor">Floor:</label>
     <input type="number" id="floor" name="floor" value={inputs.floor} onChange={handleChange} required min="0" max="5" />
 
-    <label htmlFor="elevator">Elevator:</label>
-    <input type="checkbox" id="elevator" name="elevator" value={inputs.elevator} onChange={handleChange} />
+    <label htmlFor="has_elevator">Elevator:</label>
+    <input type="checkbox" id="has_elevator" name="has_elevator" checked={inputs.has_elevator} onChange={handleChange} />
 
-    <label htmlFor="heating">Heating:</label>
-    <input type="checkbox" id="heating" name="heating" value={inputs.heating} onChange={handleChange} />
+    <label htmlFor="has_heating">Heating:</label>
+    <input type="checkbox" id="has_heating" name="has_heating" checked={inputs.has_heating} onChange={handleChange} />
 
     <button type="submit">Predict</button>
   </form>
