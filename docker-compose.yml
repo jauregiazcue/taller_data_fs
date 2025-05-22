@@ -1,15 +1,6 @@
 version: '3'
 
 services:
-  notebook:
-    image: jupyter/datascience-notebook
-    container_name: taller_notebook
-    volumes:
-      - ./notebooks:/home/jovyan/work
-    ports:
-      - 8888:8888
-    environment:
-      - JUPYTER_ENABLE_LAB=yes
     
   api:
     build: ./api

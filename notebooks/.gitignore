@@ -1,4 +1,4 @@
-*
 !.gitignore
 !housing.zip
+housing.csv
 !test.ipynb
