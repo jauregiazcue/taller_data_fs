@@ -11,9 +11,6 @@ def home():
     return jsonify({'message': 'Welcome to the housing API!'})
 
 
-if __name__ == '__main__':
-    app.run(debug=True, host="0.0.0.0")
-
 
 
 # Cargar la base de datos en un DataFrame
@@ -28,7 +25,6 @@ def predict():
     elevator = int(data['has_elevator'])
     heating = int(data['has_elevator'])
     floor = int(data['floor'])
-    location_name = 
 
     input_data = [[surface, bedrooms, restrooms]]
     prediction = model.predict(input_data)
