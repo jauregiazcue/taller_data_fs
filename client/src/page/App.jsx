@@ -4,15 +4,8 @@ import './App.css'
 
 function App() {
   const [prediction, setPrediction] = useState(null);
-  const [inputs, setInputs] = useState({
-    surface: '',
-    bedrooms: '',
-    restrooms: ''
-  });
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
+  const handleSubmit = async (inputs) => {
 
     //NEED TO UNCOMMENT THIS TO CONNECT IT WITH DATA SCIENCE
 
@@ -46,7 +39,7 @@ function App() {
     <>
       <div>
         <h1>Hestia - Buscador de hogares</h1>
-        <Searcher inputs={inputs} setInputs={setInputs} handleSubmit={handleSubmit} />
+        <Searcher onSubmit={handleSubmit} />
       </div>
 
       <div className="prediction">

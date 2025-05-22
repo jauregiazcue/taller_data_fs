@@ -1,8 +1,16 @@
 import { useState } from "react";
 
-function Searcher({inputs, setInputs, handleSubmit}) {
+function Searcher({ onSubmit }) {
+  const [inputs, setInputs] = useState({
+    surface: '',
+    bedrooms: '',
+    restrooms: ''
+  });
 
-  
+ const handleSubmit = (e) => { 
+    e.preventDefault();
+    onSubmit(inputs)
+ }
 
   const handleChange = (e) => {
     setInputs({
