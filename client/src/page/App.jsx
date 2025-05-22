@@ -17,7 +17,7 @@ function App() {
 
     let data = await response.json();
 
-    setPrediction(data.response + "€");
+    setPrediction(data.prediction + "€");
     console.log("Enter");
   };
 
