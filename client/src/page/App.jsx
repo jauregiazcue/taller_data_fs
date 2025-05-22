@@ -7,9 +7,7 @@ function App() {
 
   const handleSubmit = async (inputs) => {
 
-    //NEED TO UNCOMMENT THIS TO CONNECT IT WITH DATA SCIENCE
-
-    /*const response = await fetch('http://localhost:5000/predict', {
+    const response = await fetch('http://localhost:5000/predict', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -17,11 +15,9 @@ function App() {
       body: JSON.stringify(inputs)
     });
 
-    let data = await response.json();*/
+    let data = await response.json();
 
-    //INFO NEEDS TO BE CHANGE TO data.prediction
-    let info = 1000.0000;
-    setPrediction(info + "€");
+    setPrediction(data.response + "€");
     console.log("Enter");
   };
 
