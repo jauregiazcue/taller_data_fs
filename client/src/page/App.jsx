@@ -8,7 +8,7 @@ function App() {
   const handleSubmit = async (inputs) => {
     inputs.has_elevator == "on" ? inputs.has_elevator = 1 : inputs.has_elevator = 0;
     inputs.has_heating == "on" ? inputs.has_heating = 1 : inputs.has_heating = 0;
-    
+
     if (!inputs.surface || !inputs.bedrooms || !inputs.restrooms) return;
 
     const response = await fetch('http://localhost:5000/predict', {
@@ -38,7 +38,7 @@ function App() {
   return (
     <>
       <div>
-        <h1>Hestia - Buscador de hogares</h1>
+        <h1>Hestia</h1>
         <Searcher onSubmit={handleSubmit} />
       </div>
 
