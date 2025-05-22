@@ -25,6 +25,10 @@ def predict():
     surface = int(data['surface'])
     bedrooms = int(data['bedrooms'])
     restrooms = int(data['restrooms'])
+    elevator = int(data['has_elevator'])
+    heating = int(data['has_elevator'])
+    floor = int(data['floor'])
+    location_name = 
 
     input_data = [[surface, bedrooms, restrooms]]
     prediction = model.predict(input_data)
